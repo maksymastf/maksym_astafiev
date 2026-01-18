@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Priezvisko Meno: Žiadosť o zamestnanie v leteckej spoločnosti</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2f5;
+  margin: 20px;
+}
+h2 {
+  text-align: center;
+  color: #003366;
+}
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+td { padding: 8px; }
+label { font-weight: bold; }
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+  width: 95%;
+  padding: 6px;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+input:required, textarea:required, select:required {
+  border-left: 4px solid #cc0000;
+}
+input:invalid {
+  background: #ffe6e6;
+}
+fieldset {
+  border: 2px solid #003366;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background: #f7f9fc;
+}
+legend {
+  font-weight: bold;
+  color: #003366;
+}
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="submit"] {
+  background: #0077cc;
+  color: white;
+}
+button[type="reset"] {
+  background: #888;
+  color: white;
+}
+button:hover {
+  opacity: 0.9;
+}
+</style>
+</head>
+<body>
+<h2>Žiadosť o prácu v leteckej spoločnosti</h2>
+<form>
+<table>
+<tr>
+<td><label for="name">Meno</label></td>
+<td><input type="text" id="name" name="name"></td>
+<td><label for="pass">Heslo</label></td>
+<td><input type="password" id="pass" name="password"></td>
+</tr>
+<tr>
+<td>Odbor</td>
+<td colspan="3">
+<input type="radio" name="odbor" value="TIS"> TIS
+<input type="radio" name="odbor" value="ELE"> ELE
+</td>
+</tr>
+<tr>
+<td>Trieda</td>
+<td colspan="3">
+<select name="trieda">
+<optgroup label="Prvý ročník">
+<option>1.A</option>
+<option>1.B</option>
+<option>1.C</option>
+<option>1.D</option>
+</optgroup>
+<optgroup label="Druhý ročník">
+<option>2.A</option>
+<option>2.B</option>
+<option>2.C</option>
+<option>2.D</option>
+</optgroup>
+</select>
+</td>
+</tr>
+<tr>
+<td>Voliteľné predmety</td>
+<td colspan="3">
+<input type="checkbox" name="ins"> INS
+<input type="checkbox" name="cvm"> CVM
+<input type="checkbox" name="cuj"> CUJ
+<input type="checkbox" name="pra"> PRA
+</td>
+</tr>
+<tr>
+<td>Pripomienky</td>
+<td colspan="3"><textarea name="note" rows="4" cols="50"></textarea></td>
+</tr>
+<tr>
+<td colspan="2"><button type="reset">Vymazať</button></td>
+<td colspan="2"><button type="submit">Odoslať</button></td>
+</tr>
+</table>
+
+<fieldset><legend>Informácie o zamestnaní</legend>
+<table>
+<tr><td>Požadovaná poloha</td><td><select name="position" required>
+<option value="" disabled selected>-- Vyberte si polohu --</option>
+<option value="pilot">Pilot</option>
+<option value="steward">letuška</option>
+<option value="security">Strážca letiska</option>
+<option value="secretary">tajomník</option>
+<option value="driver">vodič</option>
+<option value="manager">vedúci oddelenia</option>
+</select></td></tr>
+<tr><td>Dátum narodenia</td><td><input type="date" name="birthdate" required></td></tr>
+<tr><td>Telefón</td><td><input type="tel" name="phone" pattern="[0-9+ ]+" required></td></tr>
+<tr><td>Email</td><td><input type="email" name="email" required></td></tr>
+<tr><td>Pracovné skúsenosti</td><td><textarea name="experience" rows="3" required></textarea></td></tr>
+<tr><td>Znalosť jazykov</td><td><input type="text" name="languages" placeholder="english, deutch..." required></td></tr>
+</table>
+</fieldset>
+</form>
+</body>
+</html>
